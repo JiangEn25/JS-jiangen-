@@ -1,0 +1,63 @@
+/* styles.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 确保用户交互不受影响 */
+    background: transparent; /* 背景透明 */
+}
+
+.rain-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 确保背景位于所有内容之下 */
+    overflow: hidden;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: #007bff;
+    opacity: 0.6;
+    animation: fall 3s infinite linear, fadeOut 3s infinite ease-in-out;
+    top: -100vh; /* 初始位置在屏幕顶部外 */
+}
+
+@keyframes fall {
+    from {
+        top: -100vh; /* 雨滴从屏幕顶部外开始 */
+    }
+    to {
+        top: 100vh; /* 雨滴移动到屏幕底部外 */
+    }
+}
+
+@keyframes fadeOut {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.1;
+    }
+}
+
+.content-container {
+    position: relative; /* 确保相对定位 */
+    z-index: 100; /* 确保内容位于顶层 */
+    padding: 20px;
+}
