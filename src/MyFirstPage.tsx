@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material"
+import { Grid,Typography, useTheme  } from "@mui/material"
 import React, { useState } from "react"
 import { Pie } from 'react-chartjs-2';
 import { Line } from "react-chartjs-2"
@@ -37,6 +37,7 @@ const RainfallChart = () => (
     <ListBase resource="rain" disableSyncWithLocation perPage={100}>
         <WithListContext
             render={({ data, isLoading }) => {
+                const theme = useTheme();
                 if (isLoading) {
                     return <p>Loading...</p>;
                 }
@@ -73,6 +74,7 @@ const RainfallChart = () => (
                         title: {
                             display: true,
                             text: 'Annual Total Monthly Rainfall',
+                            color: theme.palette.text.primary,
                         },
                     },
                     scales: {
@@ -80,12 +82,14 @@ const RainfallChart = () => (
                             title: {
                                 display: true,
                                 text: 'Year',
+                                color: theme.palette.text.secondary,
                             },
                         },
                         y: {
                             title: {
                                 display: true,
                                 text: 'Rainfall (mm)',
+                                color: theme.palette.text.secondary,
                             },
                         },
                     },

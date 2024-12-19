@@ -6,8 +6,9 @@ import PersonIcon from '@mui/icons-material/Person';
 
 const CustomMenu = (props: any) => (
     <Menu {...props}>
+       
+        <MenuItemLink to="/HomePage" primaryText="Home" leftIcon={<PersonIcon />} />
         <MenuItemLink to="/rain" primaryText="rain" leftIcon={<PersonIcon />} />
-     
         <MenuItemLink to="/MyFirstPage" primaryText="chartPage" leftIcon={<BarChartIcon />} />
         <MenuItemLink to="/MysecondPage" primaryText="3Dscatter" leftIcon={<BarChartIcon />} />
 
