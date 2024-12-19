@@ -1,53 +1,20 @@
-# my-first-admin
+hello ,I'm JiangEn
 
-## Installation
+I will give you a brief introduction to this project and how to use it.
+When you download it, open it with VScode or any other code editor, then open the src folder which contains our main files. Before running the program, you may be missing some dependencies, which may cause the program to fail, please follow the prompts to install.
+Here's what the main files do.
 
-Install the application dependencies by running:
+1.APP.tsx is the entry point or main component file for your React application. Click on it, then type npm run dev in the terminal, and when the link pops up, click on Local: http://localhost:5173/, which will open our webpage in your browser.
+2. Homepage.tsx is the project's homepage. It describes the main content of each page.
+3.MyFirstPage.tsx has five different charts.
+4.MysecondPage.tsx has a three-dimensional scatterplot.
+5. rainDataProvider.ts is a data file.
+6. theme.ts is the theme style file. (but not used in many places, this is a final project program after all)
+7.CustomMenu.tsx is a customized menu component. Other parts of the page to be displayed in the menu, you must add code in this file.
 
-```sh
-npm install
-```
+If you have any questions,you can contact my email 2753983995@qq.com
+Good luck for you.
 
-## Development
 
-Start the application in development mode by running:
 
-```sh
-npm run dev
-```
-
-## Production
-
-Build the application in production mode by running:
-
-```sh
-npm run build
-```
-
-## DataProvider
-
-The included data provider use [FakeREST](https://github.com/marmelab/fakerest) to simulate a backend.
-You'll find a `data.json` file in the `src` directory that includes some fake data for testing purposes.
-
-It includes two resources, posts and comments.
-Posts have the following properties: `id`, `title` and `content`.
-Comments have the following properties: `id`, `post_id` and `content`.
-
-## Tests
-
-You can run the included tests with the following command:
-
-```sh
-npm run test
-# or
-yarn run test
-```
-## Authentication
-
-The included auth provider should only be used for development and test purposes.
-You'll find a `users.json` file in the `src` directory that includes the users you can use.
-
-You can sign in to the application with the following usernames and password:
-- janedoe / password
-- johndoe / password
 
