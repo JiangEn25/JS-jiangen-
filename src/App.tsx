@@ -11,6 +11,7 @@ import YearSelection from './YearSelection';
 import "./styles.css"; 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import theme from './theme';
+import RainList from './RainList';
 const CustomLayout = (props: any) => (
   <div>
       {/*<RainBackground /> {/* 添加雨滴背景 */}
@@ -22,11 +23,10 @@ const CustomLayout = (props: any) => (
 export const App = () => (
   <ThemeProvider theme={theme}>
   <Admin layout={CustomLayout} dataProvider={rainDataProvider}>
-  <Resource name="rain" list={ListGuesser} edit={EditGuesser} />
+  <Resource name="rain" list={RainList} edit={EditGuesser} />
     
     <CustomRoutes>
     <Route path="/HomePage" element={<HomePage />} />
-  
       <Route path="/MyFirstPage" element={<MyFirstPage />} />
       <Route path="/MysecondPage" element={<MysecondPage />} />
     </CustomRoutes>
